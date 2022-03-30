@@ -44,11 +44,10 @@ body{
 }
 
 .image-container:hover .overlay {
-    opacity: 0.5;
+    visibility: visible;
   }
 .image-container:hover .view{
-    opacity: 1; 
-    visibility: visible;
+    display: block;
 }
 .image{
     width: 100%;
@@ -56,6 +55,7 @@ body{
     border-radius: 3%;
     object-fit: cover;
     backface-visibility: hidden;
+
 }
 .overlay{
   position: absolute;
@@ -63,15 +63,12 @@ body{
   bottom: 0;
   left: 0;
   right: 0;
-  opacity: 0;
+  visibility: hidden;
   width: 100%;
-  transition: .5s ease;
-  background-color: var(--Cyan);
+  background-color: hsl(178, 100%, 50%, 30%);
   border-radius: 3%;
   cursor: pointer;
-  
 }
-
 .view{
     text-align: center;
     justify-content: center;
@@ -80,8 +77,7 @@ body{
     left: 50%;
     color: white;
     transform: translate(-50%, -50%);
-    opacity: 0;
-    visibility: hidden;
+    display: none;
 }
 
 .title{
